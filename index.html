@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preços - Ricardo Amorim</title>
+    <link rel="stylesheet" href="indexstyle.css" />
+    <link rel="shortcut icon" type="image/png" href="Imgs/favicon.png" />
+    <link rel="shortcut icon" type="image/png" href="./Imgs/favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"/>
+    <script src="https://kit.fontawesome.com/53a67ba7bc.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+  </head>
+  <body>
+    <!--header-->
+
+    <header>
+      <nav>
+        <div class="container">
+          <img class="headerimg" src="Imgs/Logo.svg" />
+
+          <div class="menu">
+            <a href="https://risixdzn.github.io/home">Home</a>
+            <a href="https://risixdzn.github.io/portfolio">Portfólio</a>
+            <a href="#" class="is-active">Preços</a>
+            <a href="https://twitter.com/risixdzn">Contato</a>
+          </div>
+
+          <button class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <nav class="mobile-nav">
+      <a href="https://risixdzn.github.io/home">Home</a>
+      <a href="https://risixdzn.github.io/portfolio">Portfólio</a>
+      <a href="#">Preços</a>
+      <a href="https://twitter.com/risixdzn">Contato</a>
+    </nav>
+
+    <script src="main.js"></script>
+
+    <!--headerend-->
+
+    <!--progressbar-->
+    <div id="progressbar"></div>
+    <div id="scrollpath"></div>
+    <div id="percent"></div>
+    <script type="text/javascript">
+      var percent = document.getElementById("progressbar");
+      var percent = document.getElementById("percent");
+      window.onscroll = function() {
+        var totalHeight = document.body.scrollHeight - window.innerHeight;
+        var progress = (window.pageYOffset / totalHeight) * 100;
+        progressbar.style.height = progress + "%";
+      }
+    </script>
+
+    <!--backtop-->
+    <a href="#" class="to-top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <!--backtopend-->
+
+    
+    <!--pricesstart-->
+
+    <video id="videoBGhome" poster="Imgs/vidbgposter.png" autoplay muted loop>
+      <source src="Imgs/fundo-vid.mp4" type="video/mp4" />
+    </video>
+
+    <div class="align">
+      <div class="titlegrp" id="titlegrp">
+        <h1 class="pricestitle">Preços.</h1>
+        <h4 class="pricesdesc">
+          Esta é a aba de preços.<br />
+          Baseados em modelos já feitos, todas informações dessa página estão
+          sujeitas a reajuste e serão combinadas com o cliente por meio da DM do
+          Twitter <a class="twitterclick" href="https://twitter.com/risixdzn" target="_blank">@risixdzn</a>.
+        </h4>
+      </div>
+
+      <section class="prices" id="prices">
+        <div class="line1">
+          <div class="card" id="titlecard">
+            <h1 class="titlename">Jogos<br>Diversos</h1>
+            <hr class="divisao">
+            <h3 class="titledesc">League of Legends, CS:GO, Valorant</h3>            
+          </div>  
+          <div class="card" id="card"></div>   
+          <div class="card" id="card"></div>   
+        </div>
+      </section>
+    </div>
+      
+
+    </section>   
+
+    <!--pricesend-->
+
+    <!--scrollreveal-->
+    <srript>
+      ScrollReveal({
+        reset: true,
+        distance: "60px",
+        duration: 2500,
+        delay: 400,
+      });     
+      ScrollReveal().reveal(".titlegrp", {
+        delay: 0,
+      });  
+      ScrollReveal().reveal('.titlegrp h1, .titlegrp h4', {
+        delay: 500
+      });     
+    </script>
+  </body>
+</html>
