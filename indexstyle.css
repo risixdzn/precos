@@ -345,10 +345,11 @@ nav {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;  
-  gap: 45px
+  gap: 45px;  
 }
 /*cartão*/
 .prices .card{  
+  align-items: flex-end;
   width: 400px;
   height: 450px;  
   background-color: green;  
@@ -377,9 +378,10 @@ nav {
 }
 
 /*personalização PRIMEIRO cartão*/
-#titlecard{
+#titlecard{  
   background-color: rgba(255, 255, 255, 0);
-  height: auto;    
+  height: auto;
+  width: auto;      
 }
 
 /*personalização titulo PRIMEIRO cartão*/
@@ -444,13 +446,6 @@ nav {
 }
 
 /*responsive*/
-
-/*notebook*/
-@media screen and (max-width: 1400px) {
-  #titlecard{
-    width: auto;
-  }
-}
 
 /*android*/
 @media screen and (max-width: 760px) {
