@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css"/>
     <script src="https://kit.fontawesome.com/53a67ba7bc.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
     <!--header-->
@@ -69,7 +70,37 @@
     <!--backtopend-->
 
     
-    <!--pricesstart-->
+    <!--pricesstart-->   
+
+    <!--popups start-->
+    <div class="popup" id="popup-twittersimples">
+      <div class="box">         
+        <div class="content">         
+          <a class="m-close" id="m-close-twittersimples"><i class="fa-solid fa-xmark fa-2x"></i></a>          
+          <div class="leftcolumn">
+            <img src="Imgs/Products/twittersimples.png" alt="">
+          </div>
+          <div class="rightcolumn">             
+            <h1 class="title">Clip - Simples</h1>
+            <hr class="divisaopopup">  
+            <h3 class="desc">Clip para Twitter ou Tiktok, sem câmera 3d e com efeitos simples.</h3>                      
+            <a class="button" href="https://www.youtube.com/watch?v=mudjAg41pAY" target="_blank">Clique Aqui</a> 
+            <div class="legal">
+              <script>
+                  document.write('&copy;' );
+                  document.write(' 2020 - ');
+                  document.write(new Date().getFullYear());
+                  document.write(' risiXDzn - All Rights Reserved.');
+                  document.write('<br/>Last Updated : ');
+                  document.write(document.lastModified);
+              </script>              
+            </div>                
+          </div>    
+          <a class="close" id="close-twittersimples"><i class="fa-solid fa-xmark fa-3x"></i></a>          
+        </div>            
+      </div>      
+    </div>
+    <!--popups end-->
 
     <video id="videoBGhome" poster="Imgs/vidbgposter.png" autoplay muted loop>
       <source src="Imgs/fundo-vid.mp4" type="video/mp4" />
@@ -84,18 +115,114 @@
           sujeitas a reajuste e serão combinadas com o cliente por meio da DM do
           Twitter <a class="twitterclick" href="https://twitter.com/risixdzn" target="_blank">@risixdzn</a>.
         </h4>
-      </div>
+      </div>     
 
       <section class="prices" id="prices">
+        
         <div class="line1">
-          <div class="card" id="titlecard">
+          <!--titulo esquerda dentro de um card-->
+          <div class="titlecard" id="titlecard">
             <h1 class="titlename">Jogos<br>Diversos</h1>
             <hr class="divisao">
             <h3 class="titledesc">League of Legends,<br>CS:GO, Valorant</h3>            
           </div>  
-          <div class="card" id="card"></div>   
-          <div class="card" id="card"></div>   
+
+          <!--primeiro cartao linha 1-->
+          <div class="card" id="twittersimples">
+            <div class="content">
+              <div class="imgbox">
+                <img src="Imgs/Products/twittersimples.png" alt="productimage">
+              </div>
+              <div class="desc">
+                <h1 class="product">Clip - Simples</h1>
+                <h3 class="info">Clip para Twitter ou Tiktok, sem câmera 3d e com efeitos simples.</h3>  
+                <hr class="divisaocard">
+                <h1 class="pricetag">R$25</h1>   
+              </div>              
+            </div>
+
+            <script type="text/javascript">
+              $('#twittersimples').click(function(){
+                $("#popup-twittersimples").removeClass( "hide" ).addClass( "show" );
+              });
+      
+              $('#close-twittersimples').click(function(){
+                $("#popup-twittersimples").removeClass( "show" ).addClass( "hide" );
+              });
+
+              $('#m-close-twittersimples').click(function(){
+                $("#popup-twittersimples").removeClass( "show" ).addClass( "hide" );
+              });
+            </script> 
+          </div>             
+          <!--primeiro cartao linha 1 end-->
+
+          <!--segundo cartao linha 1-->
+          <div class="card" id="card">
+            <div class="content">
+              <div class="imgbox">
+                <img src="Imgs/3.jpeg" alt="productimage">
+              </div>
+              <div class="desc">
+                <h1 class="product">Clip - Avançado</h1>
+                <h3 class="info">Clip para Twitterou Tiktok. Com câmera 3d, coloração e overlays.</h3>  
+                <hr class="divisaocard">
+                <h1 class="pricetag">R$50 - 70</h1>   
+              </div>
+            </div>
+          </div>    
         </div>
+
+        <div class="textline1">
+          <hr class="divisaopage">
+          <h1 class="text">League Of Legends</h1>
+        </div>
+
+        <div class="line2">          
+
+          <div class="card" id="card">
+            <div class="content">
+              <div class="imgbox">
+                <img src="Imgs/1.jpeg" alt="productimage">
+              </div>
+              <div class="desc">
+                <h1 class="product">Teste Produto</h1>
+                <h3 class="info">Lorem ipsum dolor, sit amet consectetur adipisicing elit</h3>  
+                <hr class="divisaocard">
+                <h1 class="pricetag">R$25</h1>   
+              </div>
+            </div>
+          </div>   
+
+          <div class="card" id="card">
+            <div class="content">
+              <div class="imgbox">
+                <img src="Imgs/1.jpeg" alt="productimage">
+              </div>
+              <div class="desc">
+                <h1 class="product">Teste Produto</h1>
+                <h3 class="info">Lorem ipsum dolor, sit amet consectetur adipisicing elit</h3>  
+                <hr class="divisaocard">
+                <h1 class="pricetag">R$25</h1>   
+              </div>
+            </div>
+          </div>   
+
+          <div class="card" id="card">
+            <div class="content">
+              <div class="imgbox">
+                <img src="Imgs/3.jpeg" alt="productimage">
+              </div>
+              <div class="desc">
+                <h1 class="product">Teste Produto 2</h1>
+                <h3 class="info">Lorem ipsum dolor, sit amet consectetur adipisicing elit</h3>  
+                <hr class="divisaocard">
+                <h1 class="pricetag">R$30</h1>   
+              </div>
+            </div>
+          </div>    
+        </div>
+   
       </section>
     </div>
       
