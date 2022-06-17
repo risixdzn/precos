@@ -504,6 +504,7 @@ nav {
 .card:hover{
   background: linear-gradient(180deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.10) 100%);
   transform: scale(1.03);
+  cursor: pointer;
 }
 
 .divisao {
@@ -542,6 +543,7 @@ nav {
 .popup{
   position: fixed;
   display: flex;    
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   opacity: 0;
@@ -566,6 +568,19 @@ nav {
   transition: all .4s ease;
 }
 
+/*mostrar conteudo*/
+.popup .content.show{
+  opacity: 1;  
+  height: 90%;    
+}
+
+/*esconder conteudo*/
+.popup .content.hide{
+  opacity: 0;  
+  height: 0%;
+  transition: all .4s ease;
+}
+
 /*caixa popup */
 .popup .box{
   width: 92%;
@@ -585,10 +600,11 @@ nav {
   display: flex;
   flex-direction: row;
   gap: 50px;
+  transition: opacity .4s ease-in-out; 
 }
 
-/* popup botao close*/
 
+/* popup botao close*/
 .content .close{   
   color: #fff;
   transition: 0.4s;     
@@ -626,6 +642,7 @@ nav {
 }
 
 .rightcolumn .title{
+  display: none;
   font-family: "Poppins";
   text-align: left;
   font-size: 50px;
@@ -634,6 +651,7 @@ nav {
 }
 
 .rightcolumn .desc{
+  display: none;
   font-family: "Poppins";
   text-align: left;
   font-size: 20px;
@@ -666,6 +684,7 @@ nav {
 }
 
 .rightcolumn .legal {
+  display: none;
   font-family: "Poppins";
   font-size: 0.8vw;
   margin-top: 25px;  
@@ -758,12 +777,13 @@ nav {
     display: none;
   }
 
-  .content .m-close{    
-    display: flex;
+  .content .m-close{        
     color: #fff;
-    justify-content: end;     
-    padding: 0 0 25px 0;   
-  }
+    display: flex;
+    justify-content: flex-end;                
+    padding: 0 0 30px 0;  
+    z-index: 99; 
+  }  
   
   .popup .box .content{
     flex-direction: column;    
@@ -803,6 +823,7 @@ nav {
   }
   
   .rightcolumn .legal {    
+    display: none;
     font-size: 7px;   
     text-align: center;
   }

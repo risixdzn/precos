@@ -66,19 +66,20 @@
     <a href="#" class="to-top">
       <i class="fas fa-chevron-up"></i>
     </a>
-
     <!--backtopend-->
-
     
+
+
     <!--pricesstart-->   
 
     <!--popups start-->
-    <div class="popup" id="popup-twittersimples">
+    <!--clipsimples popup-->
+    <div class="popup" id="popup-clipsimples">         
       <div class="box">         
-        <div class="content">         
-          <a class="m-close" id="m-close-twittersimples"><i class="fa-solid fa-xmark fa-2x"></i></a>          
+        <div class="content">
+          <a class="m-close" id="m-close-clipsimples"><i class="fa-solid fa-xmark fa-2x"></i></a>      
           <div class="leftcolumn">
-            <img src="Imgs/Products/twittersimples.png" alt="">
+            <img src="Imgs/Products/clipsimples.png" alt="">
           </div>
           <div class="rightcolumn">             
             <h1 class="title">Clip - Simples</h1>
@@ -96,7 +97,36 @@
               </script>              
             </div>                
           </div>    
-          <a class="close" id="close-twittersimples"><i class="fa-solid fa-xmark fa-3x"></i></a>          
+          <a class="close" id="close-clipsimples"><i class="fa-solid fa-xmark fa-3x"></i></a>          
+        </div>            
+      </div>      
+    </div>
+
+    <!--clipavançado popup--> 
+    <div class="popup" id="popup-clipavancado">      
+      <div class="box">        
+        <div class="content">
+          <a class="m-close" id="m-close-clipavancado"><i class="fa-solid fa-xmark fa-2x"></i></a> 
+          <div class="leftcolumn">
+            <img src="Imgs/Products/clipavancado.jpg" alt="">
+          </div>
+          <div class="rightcolumn">             
+            <h1 class="title">Clip - Avançado</h1>
+            <hr class="divisaopopup">  
+            <h3 class="desc">Clip para Twitter ou Tiktok. Camera 3d + Looks + Overlays.</h3>                      
+            <a class="button" href="https://youtu.be/cjhH-_bTvIo" target="_blank">Clique Aqui</a> 
+            <div class="legal">
+              <script>
+                  document.write('&copy;' );
+                  document.write(' 2020 - ');
+                  document.write(new Date().getFullYear());
+                  document.write(' risiXDzn - All Rights Reserved.');
+                  document.write('<br/>Last Updated : ');
+                  document.write(document.lastModified);
+              </script>              
+            </div>                
+          </div>    
+          <a class="close" id="close-clipavancado"><i class="fa-solid fa-xmark fa-3x"></i></a>          
         </div>            
       </div>      
     </div>
@@ -128,10 +158,10 @@
           </div>  
 
           <!--primeiro cartao linha 1-->
-          <div class="card" id="twittersimples">
+          <div class="card" id="clipsimples">
             <div class="content">
               <div class="imgbox">
-                <img src="Imgs/Products/twittersimples.png" alt="productimage">
+                <img src="Imgs/Products/clipsimples.png" alt="productimage">
               </div>
               <div class="desc">
                 <h1 class="product">Clip - Simples</h1>
@@ -142,35 +172,62 @@
             </div>
 
             <script type="text/javascript">
-              $('#twittersimples').click(function(){
-                $("#popup-twittersimples").removeClass( "hide" ).addClass( "show" );
+              /*mostrar popup*/
+              $('#clipsimples').click(function(){
+                $("#popup-clipsimples").removeClass( "hide" ).addClass( "show" );   
+                $("#popup-clipsimples .rightcolumn .title, #popup-clipsimples .rightcolumn .desc, #popup-clipsimples .rightcolumn .legal").css({"display":"block"})             
               });
-      
-              $('#close-twittersimples').click(function(){
-                $("#popup-twittersimples").removeClass( "show" ).addClass( "hide" );
+              
+              /*esconder popup pc*/
+              $('#close-clipsimples').click(function(){
+                $("#popup-clipsimples").removeClass( "show" ).addClass( "hide" );    
+                $(".rightcolumn .title, .rightcolumn .desc, .rightcolumn .legal").css({"display":"none"})        
               });
 
-              $('#m-close-twittersimples').click(function(){
-                $("#popup-twittersimples").removeClass( "show" ).addClass( "hide" );
+              /*esconder popup mobile*/
+              $('#m-close-clipsimples').click(function(){
+                $("#popup-clipsimples").removeClass( "show" ).addClass( "hide" );  
+                $(".rightcolumn .title, .rightcolumn .desc, .rightcolumn .legal").css({"display":"none"})                   
               });
             </script> 
           </div>             
           <!--primeiro cartao linha 1 end-->
 
           <!--segundo cartao linha 1-->
-          <div class="card" id="card">
+          <div class="card" id="clipavancado">
             <div class="content">
               <div class="imgbox">
-                <img src="Imgs/3.jpeg" alt="productimage">
+                <img src="Imgs/Products/clipavancado.jpg" alt="productimage">
               </div>
               <div class="desc">
                 <h1 class="product">Clip - Avançado</h1>
-                <h3 class="info">Clip para Twitterou Tiktok. Com câmera 3d, coloração e overlays.</h3>  
+                <h3 class="info">Clip para Twitter ou Tiktok. Camera 3d + Looks + Overlays.</h3>  
                 <hr class="divisaocard">
-                <h1 class="pricetag">R$50 - 70</h1>   
-              </div>
+                <h1 class="pricetag">R$50 - 75</h1>   
+              </div>              
             </div>
-          </div>    
+
+            <script type="text/javascript">
+              /*mostrar popup*/
+              $('#clipavancado').click(function(){
+                $("#popup-clipavancado").removeClass( "hide" ).addClass( "show" );   
+                $("#popup-clipavancado .rightcolumn .title, #popup-clipavancado .rightcolumn .desc, #popup-clipavancado .rightcolumn .legal").css({"display":"block"})             
+              });
+              
+              /*esconder popup pc*/
+              $('#close-clipavancado').click(function(){
+                $("#popup-clipavancado").removeClass( "show" ).addClass( "hide" );    
+                $(".rightcolumn .title, .rightcolumn .desc, .rightcolumn .legal").css({"display":"none"})        
+              });
+
+              /*esconder popup mobile*/
+              $('#m-close-clipavancado').click(function(){
+                $("#popup-clipavancado").removeClass( "show" ).addClass( "hide" );  
+                $(".rightcolumn .title, .rightcolumn .desc, .rightcolumn .legal").css({"display":"none"})                   
+              });
+            </script> 
+          </div>             
+          <!--segundo cartao linha 1 end--> 
         </div>
 
         <div class="textline1">
